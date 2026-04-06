@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Finance Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>Finance Dashboard</h1>
+
+<select id="role">
+<option value="viewer">Viewer</option>
+<option value="admin">Admin</option>
+</select>
+
+</header>
+
+<section class="summary">
+
+<div class="card">
+<h3>Total Balance</h3>
+<p id="balance"></p>
+</div>
+
+<div class="card">
+<h3>Total Income</h3>
+<p id="income"></p>
+</div>
+
+<div class="card">
+<h3>Total Expenses</h3>
+<p id="expense"></p>
+</div>
+
+</section>
+
+<section class="charts">
+
+<div class="chart-box">
+<canvas id="trendChart"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="categoryChart"></canvas>
+</div>
+
+</section>
+
+<section class="transactions">
+
+<h2>Transactions</h2>
+
+<input type="text" id="search" placeholder="Search category">
+
+<table>
+
+<thead>
+<tr>
+<th>Date</th>
+<th>Category</th>
+<th>Amount</th>
+<th>Type</th>
+</tr>
+</thead>
+
+<tbody id="tableBody">
+</tbody>
+
+</table>
+
+<button id="addBtn">Add Transaction</button>
+
+</section>
+
+<section class="insights">
+
+<h2>Insights</h2>
+<p id="insight"></p>
+
+</section>
+
+<script src="data/transactions.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
